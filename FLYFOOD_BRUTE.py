@@ -1,8 +1,9 @@
 import itertools as it #Importando a biblioteca itertools
+import time
 
-
+ini = time.time()
 '''__Abrindo e lendo o arquivo de texto com a matriz__'''
-with open("rota2.txt", "r") as rotas:
+with open("rota.txt", "r") as rotas:
     rota = rotas.read()
 
 
@@ -159,4 +160,6 @@ def Start(caminho = [], pointr = (), dronometros = 0):
 #Aqui a função 'Start' é chamada e armazena os valores nas váriaveis 'Caminho' e 'Dronometros'
 caminho, dronometros = Start()
 print(caminho)
+end = time.time()
+print(end - ini)
 
